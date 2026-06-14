@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>精品咖啡｜沉湖月色</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="member.html" class="member">
+        <img src="assets/img/icon/user.png" class="nav-icon">
+        <span id="memberText">會員</span>
+      </a>
+    </div>
+
+    <div class="nav-center logo">
+      <img src="assets/img/logo.jpg" alt="沉湖月色 Logo" class="site-logo">
+      <span class="site-name">沉湖月色</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="cart.html" class="cart">
+        <img src="assets/img/icon/shopping-cart.png" class="nav-icon">
+        購物車
+      </a>
+    </div>
+  </header>
+
+  <!-- 導覽列 -->
+  <nav class="sub-nav">
+    <a href="index.html">首頁</a>
+    <a href="products.html">所有商品</a>
+    <a href="about.html">關於沉湖月色</a>
+    <a href="remind.html">購物須知&常見問題</a>
+  </nav>
+
+  <!-- 商品內容 -->
+  <main class="product-detail">
+
+    <div class="product-detail-img"></div>
+
+    <div class="product-detail-info">
+
+      <h1 class="product-name"></h1>
+
+      <p class="product-desc"></p>
+
+      <p class="product-size"></p>
+
+      <p class="product-storage"></p>
+
+      <!-- JS 動態產生重量與研磨方式 -->
+      <div class="product-options"></div>
+
+      <div class="product-qty">
+        <label>數量：</label>
+        <input type="number" value="1" min="1">
+      </div>
+
+      <button class="add-cart-btn big" id="addToCartBtn">
+        加入購物車
+      </button>
+
+    </div>
+
+  </main>
+
+  <!-- 商品資訊 -->
+  <section class="page product-extra">
+
+    <div class="product-specs">
+
+      <h3>商品注意事項</h3>
+
+      <ul>
+        <li>商品圖片僅供參考，實際內容物以收到商品為準。</li>
+        <li>咖啡豆屬天然農產品，每批風味可能略有差異。</li>
+        <li>黑貓宅配偶有配送延誤狀況，建議提前安排收貨時間。</li>
+        <li>若收到商品有瑕疵，請於24小時內聯繫客服處理。</li>
+      </ul>
+
+      <br>
+
+      <h3>商品規格</h3>
+
+      <ul>
+        <li>保存期限：12個月</li>
+        <li>請避免陽光直射</li>
+        <li>請存放於陰涼乾燥處</li>
+        <li>開封後建議30天內飲用完畢</li>
+        <li>採單向排氣閥夾鏈袋包裝</li>
+        <li>商品皆為新鮮烘焙後包裝出貨</li>
+      </ul>
+
+    </div>
+
+    <!-- 評論區 -->
+    <div class="product-reviews">
+
+      <h3>顧客評論</h3>
+
+      <form id="reviewForm">
+
+        <label for="rating">星級評分：</label>
+
+        <select id="rating">
+          <option value="5">★★★★★ (5)</option>
+          <option value="4">★★★★☆ (4)</option>
+          <option value="3">★★★☆☆ (3)</option>
+          <option value="2">★★☆☆☆ (2)</option>
+          <option value="1">★☆☆☆☆ (1)</option>
+        </select>
+
+        <label for="comment">評論：</label>
+
+        <textarea
+          id="comment"
+          rows="3"
+          placeholder="分享您的品飲心得..."
+        ></textarea>
+
+        <button type="submit" class="btn">
+          送出評論
+        </button>
+
+      </form>
+
+      <ul id="reviews" style="margin-top:20px;"></ul>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer footer-advanced">
+
+    <div class="footer-container">
+
+      <div class="footer-col">
+
+        <img src="assets/img/logo.jpg"
+             alt="沉湖月色 Logo"
+             class="footer-logo">
+
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61590903743438&locale=zh_TW">
+            <img src="assets/img/icon/facebook.png">
+          </a>
+
+          <a href="https://www.instagram.com/mumble_endless/">
+            <img src="assets/img/icon/instagram.png">
+          </a>
+
+          <a href="mailto:alfiework3@gmail.com">
+            <img src="assets/img/icon/envelope.png">
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-col">
+
+        <p>
+          <b>本公司官網商品已投保產品責任險</b><br>
+          投保字號：1000字第14PR123456號
+        </p>
+
+        <p>
+          <img src="assets/img/icon/envelope.png"
+               class="footer-icon">
+               hwusam0@gmail.com
+        </p>
+
+        <p>
+          食品業者登錄字號：F-123456789-0001
+        </p>
+
+      </div>
+
+      <div class="footer-col">
+
+        <p>
+          <b>線上客服時間：</b><br>
+          週一至週五 09:00–17:00
+        </p>
+
+        <a href="mailto:hwusam0@gmail.com">
+          <p>線上客服</p>
+        </a>
+
+      </div>
+
+      <div class="footer-col">
+        <a href="aboutus.html">關於我們</a>
+        <a href="service.html">服務條款</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 沉湖月色 All Rights Reserved.
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/productsdata.js"></script>
+  <script src="assets/js/product.js"></script>
+
+</body>
+</html>

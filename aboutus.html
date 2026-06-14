@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們｜沉湖月色</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<script>
+  const currentUser =
+  JSON.parse(localStorage.getItem("currentUser"));
+  
+  if(currentUser){
+  
+    document.getElementById("memberText")
+    .textContent =
+    currentUser.username;
+  
+  }
+  </script>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+          <a href="member.html" class="member">
+            <img src="assets/img/icon/user.png" class="nav-icon">
+            <span id="memberText">會員</span>
+          </a>
+        </div>
+        
+        <div class="nav-center logo">
+            <img src="assets/img/logo.jpg" alt="沉湖月色 Logo" class="site-logo">
+            <span class="site-name">沉湖月色</span>
+          </div>
+        
+        <div class="nav-right">
+            <a href="cart.html" class="cart">
+                <img src="assets/img/icon/shopping-cart.png" class="nav-icon">
+                購物車
+              </a>
+        </div>
+    </header>
+
+    <nav class="sub-nav">
+        <a href="index.html">首頁</a>
+        <a href="products.html">所有商品</a>
+        <a href="about.html">關於沉湖月色</a>
+        <a href="remind.html">購物須知&常見問題</a>
+    </nav>
+
+    <section class="page">
+        <h2 class="title">關於我們</h2>
+        <p class="text">
+            <b>11344127 胡程昕</b>
+          <br><br>
+            心得：這次期末專案讓我學到很多課堂上沒有實際接觸過的內容。
+            最一開始規劃專案時，我其實想做一個功能相當完整的大型網站，
+            希望能加入更多進階功能與系統。然而在實際規劃與開發後，
+            我逐漸發現以目前的時間、人力以及技術能力來說，原本的構想並不切實際，
+            因此決定重新調整方向，將專案規模縮小，專注於完成一個功能完整且能夠正常運作的電商網站。
+            雖然放棄了一些原本想實現的功能，但也讓整個專案更有完成的可能性。<br>
+
+            在開發過程中，遇到最大的挑戰是購物車、
+            會員系統以及 LocalStorage 的資料管理。
+            由於需要讓資料能夠在不同頁面之間正確傳遞與顯示，
+            因此花了不少時間除錯與測試。雖然過程中經常遇到問題，
+            但透過查詢資料、與組員討論以及利用 AI 協助，最後都能逐步解決。<br>
+            
+            此外，我也體會到事前規劃的重要性。
+            許多問題其實都來自於前期規劃不足，
+            導致後期需要不斷修改頁面與功能。
+            整體而言，這次專案不僅提升了我的網頁設計與程式開發能力，
+            也讓我學習到如何評估專案可行性、規劃開發流程以及與組員合作。
+            看到網站從無到有逐漸完成時，也讓我獲得很大的成就感。<br><br>
+        </p><br>
+        <p class="text">
+          <b>11344131 陳與喆</b>
+        <br><br>
+          心得：在這次製作「沉湖月色」咖啡電商網站的過程中，
+          我學到了很多網頁設計與網站開發的知識。一開始只是覺得做一個購物網站應該不會太困難，
+          但實際開始規劃後才發現，從網站架構、版面設計到功能實作，每個環節都需要花不少時間思考與調整。
+
+          在設計網站時，我希望能呈現精品咖啡給人的溫暖與質感，
+          因此在配色、圖片選擇和排版上花了許多心思，希望讓使用者進入網站時就能感受到品牌想傳達的寧靜氛圍。
+          同時也加入商品介紹、咖啡風味說明以及購物車等功能，讓整個購物流程更完整。
+          
+          製作過程中最困難的部分是前端版面的調整和功能串接，
+          常常會遇到排版跑掉、按鈕無法正常運作或資料無法正確顯示等問題。
+          不過透過查詢資料、反覆測試與修改，最後都順利解決了。
+          這次專題讓我更了解一個完整網站從規劃到完成的流程，
+          也提升了我在 HTML、CSS、JavaScript 以及網站設計方面的能力
+      </p><br>
+      <p class="text">
+        <b>11244141 陳嘉婕
+        </b>
+      <br><br>
+        心得：在這次的電商網站前端設計專案中，
+        我主要負責會員登入頁面的規劃。這讓我深刻體會到，
+        一個好用的電商平台除了商品要好找之外，「安全且流暢的入口」更是留住用戶的關鍵。
+
+        在設計登入介面時，我嘗試站在使用者的角度思考，
+        努力做到結構簡潔、直覺操作，降低引導用戶登入或註冊時的阻力。
+        雖然目前在多媒體前端設計的技術上還稱不上完全精通，
+        但透過課堂所學與期中、期末兩次專案的實作磨練，
+        我能更清晰地將理論與實務進行整合。
+        我也這才發現，看似簡單的登入表單，
+        背後其實隱藏著許多攸關用戶體驗與介面細節的學問。
+        這次的專案協作對我來說，是一次非常紮實且珍貴的實戰經驗累積！
+    </p><br>
+    
+    </section>
+
+    <footer class="footer footer-advanced">
+        <div class="footer-container">
+          <!--Logo社群-->
+          <div class="footer-col">
+            <img src="assets/img/logo.jpg" alt="沉湖月色 Logo" class="footer-logo">
+      
+            <div class="footer-social">
+              <a href="https://www.facebook.com/profile.php?id=61590903743438&locale=zh_TW"><img src="assets/img/icon/facebook.png"></a>
+              <a href="https://www.instagram.com/mumble_endless/"><img src="assets/img/icon/instagram.png"></a>
+              <a href="mailto:hwusam0@gmail.com"><img src="assets/img/icon/envelope.png"></a>
+            </div>
+          </div>
+          <!--公司資訊-->
+          <div class="footer-col">
+            <p>
+              <b>本公司官網商品已投保產品責任險</b><br>
+              投保字號：1000字第14PR123456號
+            </p>
+    
+            <p>
+              <img src="assets/img/icon/envelope.png" class="footer-icon">
+              hwusam0@gmail.com
+            </p>
+      
+            <p>
+              食品業者登錄字號：F-123456789-0001
+            </p>
+          </div>
+      
+          <!--客服資訊-->
+          <div class="footer-col">
+            <p><b>線上客服時間：</b><br>週一至週五 09:00–17:00</p>
+            <a href="mailto:hwusam0@gmail.com"><p>線上客服</p></a>
+          </div>
+      
+          <!--網站連結-->
+          <div class="footer-col">
+            <a href="aboutus.html">關於我們</a>
+            <a href="service.html">服務條款</a>
+          </div>
+      
+        </div>
+      
+        <div class="footer-bottom">
+          © 2026 沉湖月色 All Rights Reserved.
+        </div>
+      </footer>
+    
+</body>
+</html>
