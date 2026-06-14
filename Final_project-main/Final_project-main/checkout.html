@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>結帳｜沉湖月色</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="member.html" class="member">
+        <img src="assets/img/icon/user.png" class="nav-icon">
+        <span id="memberText">會員</span>
+      </a>
+    </div>
+    <div class="nav-center logo">
+      <img src="assets/img/logo.jpg" alt="沉湖月色 Logo" class="site-logo">
+      <span class="site-name">沉湖月色</span>
+    </div>
+    <div class="nav-right">
+      <a href="cart.html" class="cart">
+        <img src="assets/img/icon/shopping-cart.png" class="nav-icon">購物車
+      </a>
+    </div>
+  </header>
+
+  <nav class="sub-nav">
+    <a href="index.html">首頁</a>
+    <a href="products.html">所有商品</a>
+    <a href="about.html">關於沉湖月色</a>
+    <a href="remind.html">購物須知&常見問題</a>
+  </nav>
+
+  <main class="checkout-page">
+    <h2 class="product-title">結帳資訊</h2>
+
+    <!-- 訂單摘要 -->
+    <section class="order-summary">
+      <h3>訂單內容</h3>
+      <ul id="orderList"></ul>
+      <p class="order-total">
+        總金額：<span id="checkoutTotal">NT$0</span>
+      </p>
+    </section>
+
+    <!-- 訂購人資料 -->
+    <section class="checkout-form">
+      <h3>訂購人資料</h3>
+      <label>姓名<input type="text" id="name" required></label>
+      <label>電話<input type="tel" id="phone" required></label>
+      <label>地址<input type="text" id="address" required></label>
+      <button id="submitOrderBtn" class="btn">送出訂單</button>
+    </section>
+  </main>
+
+  <footer class="footer footer-advanced">
+    <div class="footer-container">
+      <div class="footer-col">
+        <img src="assets/img/logo.jpg" alt="沉湖月色 Logo" class="footer-logo">
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61590903743438&locale=zh_TW"><img src="assets/img/icon/facebook.png"></a>
+          <a href="https://www.instagram.com/mumble_endless/"><img src="assets/img/icon/instagram.png"></a>
+          <a href="mailto:hwusam0@gmail.com"><img src="assets/img/icon/envelope.png"></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p><b>本公司官網商品已投保產品責任險</b><br>投保字號：1000字第14PR123456號</p>
+        <p><img src="assets/img/icon/envelope.png" class="footer-icon"> hwusam0@gmail.com</p>
+        <p>食品業者登錄字號：F-123456789-0001</p>
+      </div>
+      <div class="footer-col">
+        <p><b>線上客服時間：</b><br>週一至週五 09:00–17:00</p>
+        <a href="mailto:hwusam0@gmail.com"><p>線上客服</p></a>
+      </div>
+      <div class="footer-col">
+        <a href="aboutus.html">關於我們</a>
+        <a href="service.html">服務條款</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 沉湖月色 All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    const currentUser =
+    JSON.parse(localStorage.getItem("currentUser"));
+    
+    if(currentUser){
+    
+      document.getElementById("memberText")
+      .textContent =
+      currentUser.username;
+    
+    }
+    </script>
+    
+    <script src="assets/js/checkout.js"></script>
+    
+  </body>
+</html>
