@@ -169,3 +169,94 @@ if(isNaN(qty) || qty < 1){
   alert("已加入購物車");
   
   });
+
+  const reviewForm =
+document.getElementById("reviewForm");
+
+const reviewsList =
+document.getElementById("reviews");
+
+function loadReviews(){
+
+  const reviews=
+  JSON.parse(
+    localStorage.getItem(
+      "reviews_"+product.id
+    )
+  ) || [];
+
+  reviewsList.innerHTML="";
+
+  reviews.forEach(r=>{
+
+    reviewsList.innerHTML += `
+      <li>
+        ${"★".repeat(r.rating)}
+        ${"☆".repeat(5-r.rating)}
+        <br>
+        ${r.comment}
+      </li>
+    `;
+
+  });
+
+}
+
+reviewForm.addEventListener("submit",(e)=>{
+
+  e.preventDefault();
+
+  const rating=
+  Number(
+    document.getElementById("rating").value
+  );
+
+  const comment=
+  document.getElementById("comment").value.trim();
+
+  if(!comment){
+
+    alert("請輸入評論內容");
+
+    return;
+
+  }
+
+  const reviews=
+  JSON.parse(
+    localStorage.getItem(
+      "reviews_"+product.id
+    )
+  ) || [];
+
+  const currentUser =
+JSON.parse(
+  localStorage.getItem("currentUser")
+);
+
+if(!currentUser){
+
+  alert("請先登入會員才能評論");
+
+  return;
+
+}
+
+reviews.push({
+  username: currentUser.username,
+  rating: rating,
+  comment: comment
+});
+
+  localStorage.setItem(
+    "reviews_"+product.id,
+    JSON.stringify(reviews)
+  );
+
+  reviewForm.reset();
+
+  loadReviews();
+
+});
+
+loadReviews();
